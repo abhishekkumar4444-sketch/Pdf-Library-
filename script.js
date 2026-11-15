@@ -5,8 +5,8 @@ const SUPABASE_ANON_KEY =
 "sb_publishable_51F3kT3laUrTbf4G6I08WA_WxB4aEQn";
 
 const db = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_ANON_KEY
+    https://uvgvluwfabjwtkbjunad.supabase.co,
+    sb_publishable_51F3kT3laUrTbf4G6I08WA_WxB4aEQn
 );
 
 const bookGrid = document.getElementById("bookGrid");
