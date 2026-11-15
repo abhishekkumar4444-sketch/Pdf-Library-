@@ -1,12 +1,12 @@
 const SUPABASE_URL =
-"https://uvgvluwfabjwtkbjunad.supabase.co";
+"https://icdllizxzfhixbfnodvh.supabase.co";
 
 const SUPABASE_ANON_KEY =
-"sb_publishable_51F3kT3laUrTbf4G6I08WA_WxB4aEQn";
+"sb_publishable_DQtjYzuwGPSmtaaRhUosDw_RtPYbpi3";
 
 const db = window.supabase.createClient(
-    https://uvgvluwfabjwtkbjunad.supabase.co,
-    sb_publishable_51F3kT3laUrTbf4G6I08WA_WxB4aEQn
+  https://icdllizxzfhixbfnodvh.supabase.co,
+    sb_publishable_DQtjYzuwGPSmtaaRhUosDw_RtPYbpi3
 );
 
 const bookGrid = document.getElementById("bookGrid");
