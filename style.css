@@ -1,0 +1,407 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #4f46e5;
+    --dark: #172033;
+    --muted: #68738a;
+    --light: #f5f7ff;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    background: #fff;
+}
+
+.header {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    background: white;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    background: var(--primary);
+    color: white;
+    padding: 9px 13px;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #596174;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.hero {
+    min-height: 440px;
+    padding: 75px 10%;
+    background: linear-gradient(120deg, #f1f0ff, #eaf4ff);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.tag {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.15;
+    margin: 20px 0;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 440px;
+    margin-bottom: 28px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 15px 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background: #3730a3;
+}
+
+.hero-art {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 260px;
+    height: 240px;
+    background: white;
+    border-radius: 35px;
+    box-shadow: 0 20px 60px #293b7220;
+}
+
+.book-emoji {
+    font-size: 100px;
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+    padding: 12px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px #00000012;
+    font-weight: 700;
+}
+
+.search-section {
+    padding: 85px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2,
+.upload-content h2 {
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.section-heading p,
+.upload-content p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.search-box {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 5px 18px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    gap: 12px;
+}
+
+.search-box span {
+    font-size: 28px;
+    color: var(--primary);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 15px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 22px 0 45px;
+}
+
+.filters select,
+.upload-form input,
+.upload-form select {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    background: white;
+    width: 100%;
+    font-family: inherit;
+    outline-color: var(--primary);
+}
+
+.filters select {
+    max-width: 200px;
+}
+
+.result-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.result-heading h3 {
+    font-size: 20px;
+}
+
+.result-heading span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.book-card {
+    border: 1px solid #e8eaf2;
+    border-radius: 15px;
+    padding: 22px;
+    transition: .2s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #0000000c;
+}
+
+.pdf-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.book-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.book-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.download-btn {
+    display: block;
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    background: #eeedff;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.empty-message {
+    color: var(--muted);
+    text-align: center;
+    padding: 30px;
+    grid-column: 1 / -1;
+}
+
+.upload-section {
+    padding: 80px 10%;
+    background: var(--light);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.upload-content {
+    padding-top: 40px;
+}
+
+.upload-form {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px #00000008;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.upload-form label {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.upload-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.upload-form small {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+#uploadStatus {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+footer {
+    padding: 35px 8%;
+    text-align: center;
+    background: #172033;
+    color: white;
+}
+
+footer .logo {
+    color: white;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #c3c9d5;
+    font-size: 13px;
+    margin: 8px;
+}
+
+@media(max-width: 750px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 55px 7%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-art {
+        align-self: center;
+        width: 210px;
+        height: 190px;
+    }
+
+    .book-emoji {
+        font-size: 75px;
+    }
+
+    .search-section {
+        padding: 65px 6%;
+    }
+
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .upload-section {
+        padding: 55px 6%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .upload-content {
+        padding-top: 0;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters select {
+        max-width: 100%;
+    }
+
+    .upload-form {
+        padding: 22px;
+    }
+}

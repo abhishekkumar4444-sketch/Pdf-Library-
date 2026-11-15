@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDF Library - Free School Books</title>
+
+    <meta name="description"
+          content="Discover and download school book chapter PDFs.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <a href="#" class="logo">
+        <span class="logo-icon">P</span>
+        PDF Library
+    </a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#library">Books</a>
+        <a href="#upload">Upload PDF</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tag">YOUR DIGITAL SCHOOL LIBRARY</span>
+
+        <h1>
+            Every Chapter.<br>
+            One <span>Library.</span>
+        </h1>
+
+        <p>
+            Find your school books and download
+            chapter PDFs in one place.
+        </p>
+
+        <a href="#library" class="primary-btn">
+            Explore Books →
+        </a>
+    </div>
+
+    <div class="hero-art">
+        <div class="book-emoji">📚</div>
+        <div class="floating-card">📄 PDF Files</div>
+    </div>
+</section>
+
+<section class="search-section" id="library">
+
+    <div class="section-heading">
+        <span class="tag">DIGITAL COLLECTION</span>
+        <h2>Explore Library</h2>
+        <p>Find books, subjects and chapters.</p>
+    </div>
+
+    <div class="search-box">
+        <span>⌕</span>
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search books or chapters..."
+        >
+    </div>
+
+    <div class="filters">
+        <select id="classFilter">
+            <option value="">All Classes</option>
+            <option>Class 1</option>
+            <option>Class 2</option>
+            <option>Class 3</option>
+            <option>Class 4</option>
+            <option>Class 5</option>
+            <option>Class 6</option>
+            <option>Class 7</option>
+            <option>Class 8</option>
+            <option>Class 9</option>
+            <option>Class 10</option>
+            <option>Class 11</option>
+            <option>Class 12</option>
+        </select>
+
+        <select id="subjectFilter">
+            <option value="">All Subjects</option>
+            <option>Mathematics</option>
+            <option>Science</option>
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Social Science</option>
+            <option>Computer</option>
+        </select>
+    </div>
+
+    <div class="result-heading">
+        <h3>Available PDFs</h3>
+        <span id="bookCount">0 Books</span>
+    </div>
+
+    <div id="bookGrid" class="book-grid">
+        <p class="empty-message">Loading library...</p>
+    </div>
+
+</section>
+
+<section class="upload-section" id="upload">
+
+    <div class="upload-content">
+        <span class="tag">CONTRIBUTE TO LIBRARY</span>
+        <h2>Share Your PDF</h2>
+
+        <p>
+            Have a school chapter PDF that you are
+            allowed to share? Submit it to our library.
+            Admin approval is required before publishing.
+        </p>
+    </div>
+
+    <form id="uploadForm" class="upload-form">
+
+        <label>Your Name</label>
+        <input
+            type="text"
+            id="uploaderName"
+            placeholder="Enter your name"
+        >
+
+        <label>Book Name</label>
+        <input
+            type="text"
+            id="bookTitle"
+            placeholder="Enter book name"
+            required
+        >
+
+        <label>Class</label>
+        <select id="uploadClass" required>
+            <option value="">Select Class</option>
+            <option>Class 1</option>
+            <option>Class 2</option>
+            <option>Class 3</option>
+            <option>Class 4</option>
+            <option>Class 5</option>
+            <option>Class 6</option>
+            <option>Class 7</option>
+            <option>Class 8</option>
+            <option>Class 9</option>
+            <option>Class 10</option>
+            <option>Class 11</option>
+            <option>Class 12</option>
+        </select>
+
+        <label>Subject</label>
+        <select id="uploadSubject" required>
+            <option value="">Select Subject</option>
+            <option>Mathematics</option>
+            <option>Science</option>
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Social Science</option>
+            <option>Computer</option>
+        </select>
+
+        <label>Chapter Name</label>
+        <input
+            type="text"
+            id="chapterName"
+            placeholder="Enter chapter name"
+            required
+        >
+
+        <label>Select PDF File (Maximum 20 MB)</label>
+        <input
+            type="file"
+            id="pdfFile"
+            accept=".pdf,application/pdf"
+            required
+        >
+
+        <button type="submit" class="primary-btn upload-btn">
+            Submit PDF
+        </button>
+
+        <p id="uploadStatus" role="status"></p>
+
+        <small>
+            Your submission will remain private until
+            approved by the administrator.
+        </small>
+
+    </form>
+
+</section>
+
+</main>
+
+<footer>
+    <a href="#" class="logo">📚 PDF Library</a>
+    <p>Learn. Read. Grow.</p>
+    <p>© 2026 PDF Library</p>
+</footer>
+
+</body>
+</html>
